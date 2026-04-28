@@ -10,10 +10,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/advan/X1/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelOS stuff.
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_X1
+# Feature
+TARGET_HAS_UDFPS := false
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGING := true
+PERF_ANIM_OVERRIDE := true
+
+PRODUCT_NAME := custom_X1
 PRODUCT_DEVICE := X1
 PRODUCT_MANUFACTURER := ADVAN
 PRODUCT_BRAND := ADVAN
