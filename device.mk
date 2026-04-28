@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += \
 # Dolby
 $(call inherit-product, vendor/sony/dolby/setup.mk)
 
+# GameBar
+$(call inherit-product-if-exists, packages/apps/GameBar/gamebar.mk)
+
 # DRM (Clearkey)
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey
